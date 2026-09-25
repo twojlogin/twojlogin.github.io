@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projekty // Arek</title>
+<style>
+:root{--bg:#0a0e14;--panel:#121821;--border:#26303d;--text:#e6edf3;--dim:#8b949e;
+--green:#3fb950;--cyan:#39c5cf;--gold:#e3b341;--font:'Courier New',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--font);padding:16px;
+background-image:radial-gradient(circle at 50% 0%,rgba(63,185,80,.05),transparent 60%)}
+main{max-width:1000px;margin:auto}
+header{padding:32px 0 20px;border-bottom:1px solid var(--border);margin-bottom:22px}
+h1{font-size:2rem;color:var(--green);letter-spacing:1px}
+.lead{color:var(--dim);margin-top:8px;line-height:1.65;max-width:720px}
+.item{border:1px solid var(--border);background:var(--panel);border-radius:8px;padding:16px;margin-bottom:12px}
+.item:hover{border-color:var(--green)}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2{font-size:1.15rem;color:var(--cyan)}
+.badge{font-size:.7rem;border:1px solid var(--green);color:var(--green);padding:2px 8px;border-radius:10px;white-space:nowrap}
+.badge.dim{border-color:var(--dim);color:var(--dim)}
+p{color:var(--dim);margin-top:7px;line-height:1.6;font-size:.9rem}
+.tags{margin-top:9px;display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:.68rem;border:1px solid var(--border);color:var(--dim);padding:2px 7px;border-radius:4px}
+a{color:var(--green)}
+.lnks{margin-top:10px;display:flex;gap:12px;flex-wrap:wrap;font-size:.82rem}
+.lnks a{text-decoration:none;border-bottom:1px solid #3fb95055;padding-bottom:1px}
+.lnks a:hover{border-color:var(--green)}
+.note{margin:24px 0;padding:14px 16px;border:1px dashed var(--gold);border-radius:8px;color:var(--dim);
+font-size:.86rem;line-height:1.7}
+footer{margin-top:34px;padding-top:16px;border-top:1px solid var(--border);color:var(--dim);font-size:.78rem}
+a.back{color:var(--dim);text-decoration:none;font-size:.8rem}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>PROJEKTY</h1>
+  <p class="lead">Tu jest praca, a nie zbiory. Każdy projekt ma testy albo
+  przynajmniej instrukcję uruchomienia. Część kodu powstała z pomocą modeli AI —
+  decyzje, testy i naprawy są moje, i tak to opisuję w repozytoriach.</p>
+</header>
+
+<div class="item">
+  <div class="top"><h2>Poker — Texas Hold'em (hotseat 2–6)</h2><span class="badge">21/21 testów</span></div>
+  <p>Silnik napisany od zera: ocena układów od wysokiej karty po royal flush,
+  wybór najlepszych 5 z 7 kart, blindy, pełne rundy, side poty przy all-inach,
+  blokada podbicia po short all-in. Zero zależności, czysty JavaScript.</p>
+  <div class="tags"><span class="tag">JavaScript</span><span class="tag">Node tests</span><span class="tag">testowane</span></div>
+  <div class="lnks"><a href="https://github.com/twojlogin/poker" target="_blank" rel="noopener">Kod</a></div>
+</div>
+
+<div class="item">
+  <div class="top"><h2>OpenHMM — przychodnia ThinkPada</h2><span class="badge">144/144 testów</span></div>
+  <p>Diagnostyka sprzętu odczytem z /sys i /proc: model, temperatury z progami
+  pobranymi z kernela, wentylator, zużycie baterii, inwentaryzacja. CLI i web,
+  wyłącznie do odczytu. Zawiera wykrywanie i usuwanie 30 cichych duplikatów
+  w mapie modeli (test na poziomie AST).</p>
+  <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">unittest</span></div>
+</div>
+
+<div class="item">
+  <div class="top"><h2>ArekBox — zestaw narzędzi sysadmin</h2><span class="badge">22 moduły</span></div>
+  <p>Własne skrypty administracyjne: backupy, firewall, GRUB, usługi, wentylator
+  ThinkPada, monitoring, multimedia, PDF, OSINT. Zero skryptów „z internetu” —
+  napisane pod swoje maszyny, z testami i shellcheckiem.</p>
+  <div class="tags"><span class="tag">Bash</span><span class="tag">sysadmin</span><span class="tag">OSINT</span></div>
+</div>
+
+<div class="item">
+  <div class="top"><h2>Ollamama — bot 7 osobowości AI</h2><span class="badge">5/5 smoke</span></div>
+  <p>Jeden mózg, wiele wyjść: IRC, Telegram, Discord, Twitch, Kick. Siedem postaci
+  (Arek, Zuzia, Marek, Irena, Kuba, WormGPT, Kasia) z własnymi charakterami.
+  Działa też bez internetu na lokalnej sieci testowej.</p>
+  <div class="tags"><span class="tag">Python</span><span class="tag">IRC</span><span class="tag">adaptery</span></div>
+</div>
+
+<div class="item">
+  <div class="top"><h2>Unified Chaos Platform</h2><span class="badge">59/59 testów</span></div>
+  <p>Pięć silników bezpieczeństwa sieciowego (proxy mutujący, obfuscator,
+  interceptor, fragmentacja TCP, probe smuggling) plus dashboard z terminalem
+  w przeglądarce. Używać wyłącznie do własnych maszyn i sieci testowych.</p>
+  <div class="tags"><span class="tag">Python</span><span class="tag">aiohttp</span><span class="tag">websockets</span></div>
+</div>
+
+<div class="item">
+  <div class="top"><h2>Awesome Core — menedżer narzędzi</h2><span class="badge dim">CLI + web</span></div>
+  <p>Lokalna baza narzędzi z tysięcy list awesome, z wyszukiwarką i własnym
+  indeksem. Naprawione: uruchamianie bez bazy danych, raportowanie błędów
+  zamiast tracebacka, walidacja argumentów.</p>
+  <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span></div>
+</div>
+
+<div class="note">
+  <strong>Jak to czytać:</strong> kod powstaje z rozmów z modelami — tak jak teraz.
+  Liczy się to, co zostaje po rozmowie: testy, naprawione błędy, decyzje
+  i gotowość do utrzymania. Każde repozytorium ma opis, skąd wzięło się
+  każda linia i co dokładnie zostało zrobione ręcznie.
+</div>
+
+<footer>
+  <a class="back" href="index.html">← wróć do muzeum</a>
+  <p style="margin-top:10px">Arek // Toruń // Linux, gry i kontrolowany chaos</p>
+</footer>
+</main>
+</body>
+</html>
